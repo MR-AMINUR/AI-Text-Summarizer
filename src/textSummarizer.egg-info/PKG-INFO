@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: textSummarizer
+Version: 0.0.0
+Summary: A small python package for NLP app
+Home-page: https://github.com/MR-AMINUR/AI-Text-Summarizer
+Author: MR-AMINUR
+Author-email: aminur01mallick@gmail.com
+Project-URL: Bug Tracker, https://github.com/MR-AMINUR/AI-Text-Summarizer/issues
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: summary
+
+# AI Text Summerizer
+Python + Gen AI project
