@@ -94,3 +94,27 @@ TypeError: DataIngestion.extract_zip() missing 1 required positional argument: '
 [2025-10-22 08:57:52,377: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
 
 x==========x]
+[2025-10-22 16:27:50,104: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 16:27:50,139: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 16:27:50,140: INFO: common: created directory at: artifacts]
+[2025-10-22 16:27:50,142: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 16:27:51,331: INFO: 1969300191: Downloaded artifacts\data_ingestion\SamsumData.zip from https://github.com/MR-AMINUR/New-Repo/raw/refs/heads/main/SamsumData.zip]
+[2025-10-22 16:27:51,332: INFO: 1969300191: Size of downloaded file: ~ 0 KB]
+[2025-10-22 16:27:51,333: INFO: 1969300191: Extracted zip file to artifacts\data_ingestion]
+[2025-10-22 16:42:29,077: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 16:42:29,078: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 16:42:29,080: INFO: common: created directory at: artifacts]
+[2025-10-22 16:42:29,081: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 16:42:29,083: INFO: 1583535059: File already exists at artifacts\data_ingestion\SamsumData.zip]
+[2025-10-22 16:42:29,085: INFO: 1583535059: Extracted zip file to artifacts\data_ingestion]
+[2025-10-22 16:49:03,793: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-22 16:49:03,795: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 16:49:03,795: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 16:49:03,796: INFO: common: created directory at: artifacts]
+[2025-10-22 16:49:03,797: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 16:49:05,653: INFO: data_ingestion: Downloaded artifacts\data_ingestion\SamsumData.zip from https://github.com/MR-AMINUR/New-Repo/raw/refs/heads/main/SamsumData.zip]
+[2025-10-22 16:49:05,654: INFO: data_ingestion: Size of downloaded file: ~ 0 KB]
+[2025-10-22 16:49:05,655: INFO: data_ingestion: Extracted zip file to artifacts\data_ingestion]
+[2025-10-22 16:49:05,656: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]

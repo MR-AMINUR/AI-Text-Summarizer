@@ -11,24 +11,21 @@ from typing import Any
 @ensure_annotations
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
     """
-    reads yaml file and returns
-
-    Args:
-        path_to_yaml (str): path like input
-
-    Raises:
-        ValueError: if yaml file is empty
-        e : empty file 
-
-    Returns:
-        ConfigBox: ConfigBox type
-    
+    Reads YAML file and returns a ConfigBox object.
+    Accepts both str and Path inputs.
     """
     try:
-        with open(path_to_yaml) as yaml_file:
+        # ✅ convert string to Path safely before opening
+        path_to_yaml = Path(path_to_yaml)
+
+        with open(path_to_yaml, 'r') as yaml_file:
             content = yaml.safe_load(yaml_file)
+            if content is None:
+                raise ValueError("yaml file is empty")
+
             logger.info(f"yaml file: {path_to_yaml} loaded successfully")
             return ConfigBox(content)
+
     except BoxValueError:
         raise ValueError("yaml file is empty")
     except Exception as e:
