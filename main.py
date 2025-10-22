@@ -6,7 +6,8 @@ STAGE_NAME = "Data Ingestion Stage"
 try:
     logger.info(f">>>>>> Stage {STAGE_NAME} started <<<<<<")
     data_ingestion_pipeline = DataIngestionPipeline()
-    data_ingestion_pipeline.main()
+
+    dataset =data_ingestion_pipeline.main()
     logger.info(f">>>>>> Stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
 except Exception as e:
     logger.exception(f"Error in stage {STAGE_NAME}: {e}")
@@ -14,12 +15,12 @@ except Exception as e:
 
 
 
-STAGE_NAME = "Data validation Stage"
-try:
-    logger.info(f">>>>>> Stage {STAGE_NAME} started <<<<<<")
-    data_validation_pipeline = DataValidationPipeline()
-    data_validation_pipeline.main()
-    logger.info(f">>>>>> Stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
-except Exception as e:
-    logger.exception(f"Error in stage {STAGE_NAME}: {e}")
-    raise e
+# STAGE_NAME = "Data validation Stage"
+# try:
+#     logger.info(f">>>>>> Stage {STAGE_NAME} started <<<<<<")
+#     data_validation_pipeline = DataValidationPipeline()
+#     data_validation_pipeline.main()
+#     logger.info(f">>>>>> Stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+# except Exception as e:
+#     logger.exception(f"Error in stage {STAGE_NAME}: {e}")
+#     raise e

@@ -5,8 +5,10 @@ from textSummarizer.logging import logger
 
 class DataIngestionPipeline:
     def __init__(self):
-        pass
-
+        self.config_manager = ConfigurationManager()
+        self.data_ingestion_config = self.config_manager.get_data_ingestion_config()
+        # define self.data_ingestion here
+        self.data_ingestion = DataIngestion(config=self.data_ingestion_config)
     def main(self):
         
             config = ConfigurationManager()
@@ -16,4 +18,5 @@ class DataIngestionPipeline:
 
             data_ingestion.download_file()
             data_ingestion.extract_zip_file()
+            self.data_ingestion.prepare_dataset()
         

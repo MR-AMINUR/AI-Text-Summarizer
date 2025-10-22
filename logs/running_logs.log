@@ -321,3 +321,425 @@ x==========x]
 [2025-10-22 19:23:03,239: INFO: main: >>>>>> Stage Data validation Stage completed <<<<<<
 
 x==========x]
+[2025-10-22 19:52:20,697: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 19:52:20,700: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 19:52:20,702: INFO: common: created directory at: artifacts]
+[2025-10-22 19:52:20,705: INFO: common: created directory at: artifacts/data_transformation]
+[2025-10-22 19:52:20,706: ERROR: 2383176258: Incorrect path_or_model_id: 'google\pegasus-cnn_dailymail'. Please provide either the path to a local folder or the repo_id of a model on the Hub.]
+Traceback (most recent call last):
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\transformers\utils\hub.py", line 402, in cached_file
+    resolved_file = hf_hub_download(
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\huggingface_hub\utils\_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: 'google\pegasus-cnn_dailymail'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_21248\2383176258.py", line 4, in <module>
+    data_transformation = DataTransformation(config=data_transformation_config)
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_21248\1537832415.py", line 4, in __init__
+    self.tokenizer = AutoTokenizer.from_pretrained(self.config.tokenizer_name)
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 834, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 666, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\transformers\utils\hub.py", line 466, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: 'google\pegasus-cnn_dailymail'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+[2025-10-22 19:56:46,150: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-22 19:56:46,152: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 19:56:46,153: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 19:56:46,153: INFO: common: created directory at: artifacts]
+[2025-10-22 19:56:46,154: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 19:56:46,154: INFO: data_ingestion: File already exists at artifacts\data_ingestion\SamsumData.zip]
+[2025-10-22 19:56:46,155: INFO: data_ingestion: Extracted zip file to artifacts\data_ingestion]
+[2025-10-22 19:56:46,155: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-10-22 19:56:46,155: INFO: main: >>>>>> Stage Data validation Stage started <<<<<<]
+[2025-10-22 19:56:46,156: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 19:56:46,157: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 19:56:46,158: INFO: common: created directory at: artifacts]
+[2025-10-22 19:56:46,158: INFO: common: created directory at: artifacts/data_validation]
+[2025-10-22 19:56:46,158: INFO: main: >>>>>> Stage Data validation Stage completed <<<<<<
+
+x==========x]
+[2025-10-22 19:58:38,063: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 19:58:38,066: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 19:58:38,068: INFO: common: created directory at: artifacts]
+[2025-10-22 19:58:38,071: INFO: common: created directory at: artifacts/data_transformation]
+[2025-10-22 19:58:38,073: ERROR: 2383176258: Incorrect path_or_model_id: 'google\pegasus-cnn_dailymail'. Please provide either the path to a local folder or the repo_id of a model on the Hub.]
+Traceback (most recent call last):
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\transformers\utils\hub.py", line 402, in cached_file
+    resolved_file = hf_hub_download(
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\huggingface_hub\utils\_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: 'google\pegasus-cnn_dailymail'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_21248\2383176258.py", line 4, in <module>
+    data_transformation = DataTransformation(config=data_transformation_config)
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_21248\1537832415.py", line 4, in __init__
+    self.tokenizer = AutoTokenizer.from_pretrained(self.config.tokenizer_name)
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 834, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 666, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\transformers\utils\hub.py", line 466, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: 'google\pegasus-cnn_dailymail'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+[2025-10-22 20:04:53,162: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 20:04:53,165: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 20:04:53,167: INFO: common: created directory at: artifacts]
+[2025-10-22 20:04:53,169: INFO: common: created directory at: artifacts/data_transformation]
+[2025-10-22 20:04:58,587: ERROR: 4090147737: Directory artifacts\data_ingestion\Samsum_dataset is neither a `Dataset` directory nor a `DatasetDict` directory.]
+Traceback (most recent call last):
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_21248\4090147737.py", line 5, in <module>
+    data_transformation.convert()
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_21248\1537832415.py", line 18, in convert
+    dataset_samsum = load_from_disk(self.config.data_path)
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1479, in load_from_disk
+    raise FileNotFoundError(
+FileNotFoundError: Directory artifacts\data_ingestion\Samsum_dataset is neither a `Dataset` directory nor a `DatasetDict` directory.
+[2025-10-22 20:05:42,075: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 20:05:42,077: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 20:05:42,079: INFO: common: created directory at: artifacts]
+[2025-10-22 20:05:42,081: INFO: common: created directory at: artifacts/data_transformation]
+[2025-10-22 20:05:42,930: ERROR: 4090147737: Directory artifacts\data_ingestion\samsum_dataset is neither a `Dataset` directory nor a `DatasetDict` directory.]
+Traceback (most recent call last):
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_21248\4090147737.py", line 5, in <module>
+    data_transformation.convert()
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_21248\1537832415.py", line 18, in convert
+    dataset_samsum = load_from_disk(self.config.data_path)
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1479, in load_from_disk
+    raise FileNotFoundError(
+FileNotFoundError: Directory artifacts\data_ingestion\samsum_dataset is neither a `Dataset` directory nor a `DatasetDict` directory.
+[2025-10-22 20:17:11,442: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 20:17:11,447: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 20:17:11,449: INFO: common: created directory at: artifacts]
+[2025-10-22 20:17:11,452: INFO: common: created directory at: artifacts/data_transformation]
+[2025-10-22 20:17:13,877: ERROR: 4090147737: Directory artifacts\data_ingestion\samsum_dataset is neither a `Dataset` directory nor a `DatasetDict` directory.]
+Traceback (most recent call last):
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_21248\4090147737.py", line 5, in <module>
+    data_transformation.convert()
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_21248\1537832415.py", line 18, in convert
+    dataset_samsum = load_from_disk(self.config.data_path)
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1479, in load_from_disk
+    raise FileNotFoundError(
+FileNotFoundError: Directory artifacts\data_ingestion\samsum_dataset is neither a `Dataset` directory nor a `DatasetDict` directory.
+[2025-10-22 20:22:20,828: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 20:22:20,833: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 20:22:20,836: INFO: common: created directory at: artifacts]
+[2025-10-22 20:22:20,838: INFO: common: created directory at: artifacts/data_transformation]
+[2025-10-22 20:22:22,060: ERROR: 4090147737: Directory artifacts\data_ingestion\samsum_dataset is neither a `Dataset` directory nor a `DatasetDict` directory.]
+Traceback (most recent call last):
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_23380\4090147737.py", line 5, in <module>
+    data_transformation.convert()
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_23380\1467856860.py", line 18, in convert
+    samsum_dataset = load_from_disk(self.config.data_path)
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1479, in load_from_disk
+    raise FileNotFoundError(
+FileNotFoundError: Directory artifacts\data_ingestion\samsum_dataset is neither a `Dataset` directory nor a `DatasetDict` directory.
+[2025-10-22 21:10:52,316: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-22 21:10:52,317: ERROR: main: Error in stage Data Ingestion Stage: 'DataIngestionPipeline' object has no attribute 'prepare_dataset']
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\main.py", line 9, in <module>
+    data_ingestion_pipeline.prepare_dataset()
+AttributeError: 'DataIngestionPipeline' object has no attribute 'prepare_dataset'
+[2025-10-22 21:13:56,991: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-22 21:13:56,993: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 21:13:56,994: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 21:13:56,994: INFO: common: created directory at: artifacts]
+[2025-10-22 21:13:56,995: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 21:13:56,995: INFO: data_ingestion: File already exists at artifacts\data_ingestion\SamsumData.zip]
+[2025-10-22 21:13:56,995: INFO: data_ingestion: Extracted zip file to artifacts\data_ingestion]
+[2025-10-22 21:13:56,996: ERROR: main: Error in stage Data Ingestion Stage: 'DataIngestionPipeline' object has no attribute 'data_ingestion']
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\main.py", line 9, in <module>
+    data_ingestion_pipeline.main()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\pipeline\stage_01_data_ingestion.py", line 19, in main
+    self.data_ingestion.prepare_dataset()
+AttributeError: 'DataIngestionPipeline' object has no attribute 'data_ingestion'
+[2025-10-22 21:18:13,628: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-22 21:18:13,630: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 21:18:13,631: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 21:18:13,632: INFO: common: created directory at: artifacts]
+[2025-10-22 21:18:13,632: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 21:18:13,634: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 21:18:13,635: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 21:18:13,635: INFO: common: created directory at: artifacts]
+[2025-10-22 21:18:13,636: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 21:18:13,636: INFO: data_ingestion: File already exists at artifacts\data_ingestion\SamsumData.zip]
+[2025-10-22 21:18:13,637: INFO: data_ingestion: Extracted zip file to artifacts\data_ingestion]
+[2025-10-22 21:18:14,241: ERROR: main: Error in stage Data Ingestion Stage: Dataset 'samsum' doesn't exist on the Hub or cannot be accessed.]
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\main.py", line 9, in <module>
+    data_ingestion_pipeline.main()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\pipeline\stage_01_data_ingestion.py", line 21, in main
+    self.data_ingestion.prepare_dataset()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_ingestion.py", line 33, in prepare_dataset
+    dataset = load_dataset("samsum")
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1397, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1137, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1030, in dataset_module_factory
+    raise e1 from None
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 985, in dataset_module_factory
+    raise DatasetNotFoundError(f"Dataset '{path}' doesn't exist on the Hub or cannot be accessed.") from e
+datasets.exceptions.DatasetNotFoundError: Dataset 'samsum' doesn't exist on the Hub or cannot be accessed.
+[2025-10-22 21:36:40,737: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-22 21:36:40,739: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 21:36:40,740: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 21:36:40,740: INFO: common: created directory at: artifacts]
+[2025-10-22 21:36:40,740: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 21:36:40,743: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 21:36:40,743: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 21:36:40,743: INFO: common: created directory at: artifacts]
+[2025-10-22 21:36:40,743: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 21:36:42,145: INFO: data_ingestion: Downloaded artifacts\data_ingestion\SamsumData.zip from https://github.com/MR-AMINUR/New-Repo/raw/refs/heads/main/SamsumData.zip]
+[2025-10-22 21:36:42,146: INFO: data_ingestion: Size of downloaded file: ~ 0 KB]
+[2025-10-22 21:36:42,148: INFO: data_ingestion: Extracted zip file to artifacts\data_ingestion]
+[2025-10-22 21:36:42,706: ERROR: main: Error in stage Data Ingestion Stage: Dataset 'samsum' doesn't exist on the Hub or cannot be accessed.]
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\main.py", line 10, in <module>
+    dataset =data_ingestion_pipeline.main()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\pipeline\stage_01_data_ingestion.py", line 21, in main
+    self.data_ingestion.prepare_dataset()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_ingestion.py", line 33, in prepare_dataset
+    dataset = load_dataset("samsum")
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1397, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1137, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1030, in dataset_module_factory
+    raise e1 from None
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 985, in dataset_module_factory
+    raise DatasetNotFoundError(f"Dataset '{path}' doesn't exist on the Hub or cannot be accessed.") from e
+datasets.exceptions.DatasetNotFoundError: Dataset 'samsum' doesn't exist on the Hub or cannot be accessed.
+[2025-10-22 21:37:36,987: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-22 21:37:36,987: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 21:37:36,989: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 21:37:36,989: INFO: common: created directory at: artifacts]
+[2025-10-22 21:37:36,989: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 21:37:36,991: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 21:37:36,991: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 21:37:36,992: INFO: common: created directory at: artifacts]
+[2025-10-22 21:37:36,992: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 21:37:37,653: INFO: data_ingestion: Downloaded artifacts\data_ingestion\SamsumData.zip from https://github.com/MR-AMINUR/New-Repo/raw/refs/heads/main/SamsumData.zip]
+[2025-10-22 21:37:37,654: INFO: data_ingestion: Size of downloaded file: ~ 0 KB]
+[2025-10-22 21:37:37,654: INFO: data_ingestion: Extracted zip file to artifacts\data_ingestion]
+[2025-10-22 21:37:38,153: ERROR: main: Error in stage Data Ingestion Stage: Dataset 'samsum' doesn't exist on the Hub or cannot be accessed.]
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\main.py", line 10, in <module>
+    dataset =data_ingestion_pipeline.main()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\pipeline\stage_01_data_ingestion.py", line 21, in main
+    self.data_ingestion.prepare_dataset()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_ingestion.py", line 33, in prepare_dataset
+    dataset = load_dataset("samsum")
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1397, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1137, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1030, in dataset_module_factory
+    raise e1 from None
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 985, in dataset_module_factory
+    raise DatasetNotFoundError(f"Dataset '{path}' doesn't exist on the Hub or cannot be accessed.") from e
+datasets.exceptions.DatasetNotFoundError: Dataset 'samsum' doesn't exist on the Hub or cannot be accessed.
+[2025-10-22 21:40:12,150: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 21:40:12,154: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 21:40:12,157: INFO: common: created directory at: artifacts]
+[2025-10-22 21:40:12,159: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 21:41:45,164: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 21:41:45,166: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 21:41:45,169: INFO: common: created directory at: artifacts]
+[2025-10-22 21:41:45,172: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 21:41:45,173: INFO: common: created directory at: artifacts\data_ingestion]
+[2025-10-22 21:41:45,175: INFO: 3745921866: File already exists at artifacts\data_ingestion\SamsumData.zip]
+[2025-10-22 21:43:42,523: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 21:43:42,527: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 21:43:42,531: INFO: common: created directory at: artifacts]
+[2025-10-22 21:43:42,534: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 21:43:42,537: INFO: common: created directory at: artifacts\data_ingestion]
+[2025-10-22 21:43:42,539: INFO: 3745921866: File already exists at artifacts\data_ingestion\SamsumData.zip]
+[2025-10-22 21:44:04,559: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 21:44:04,561: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 21:44:04,563: INFO: common: created directory at: artifacts]
+[2025-10-22 21:44:04,566: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 21:44:04,568: INFO: common: created directory at: artifacts\data_ingestion]
+[2025-10-22 21:44:04,569: INFO: 3745921866: File already exists at artifacts\data_ingestion\SamsumData.zip]
+[2025-10-22 21:45:00,518: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 21:45:00,522: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 21:45:00,524: INFO: common: created directory at: artifacts]
+[2025-10-22 21:45:00,527: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 21:45:00,529: INFO: common: created directory at: artifacts\data_ingestion]
+[2025-10-22 21:45:00,530: INFO: 3745921866: File already exists at artifacts\data_ingestion\SamsumData.zip]
+[2025-10-22 21:45:00,533: INFO: common: created directory at: artifacts\data_ingestion]
+[2025-10-22 21:45:00,535: INFO: 3745921866: Extracted zip file to artifacts\data_ingestion]
+[2025-10-22 23:30:13,664: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 23:30:13,666: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 23:30:13,668: INFO: common: created directory at: artifacts]
+[2025-10-22 23:30:13,669: INFO: common: created directory at: artifacts/data_transformation]
+[2025-10-22 23:30:14,980: ERROR: 4090147737: Directory artifacts\data_ingestion\samsum_dataset not found]
+Traceback (most recent call last):
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_20956\4090147737.py", line 5, in <module>
+    data_transformation.convert()
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_20956\1467856860.py", line 18, in convert
+    samsum_dataset = load_from_disk(self.config.data_path)
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1471, in load_from_disk
+    raise FileNotFoundError(f"Directory {dataset_path} not found")
+FileNotFoundError: Directory artifacts\data_ingestion\samsum_dataset not found
+[2025-10-22 23:33:22,859: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-22 23:33:22,861: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 23:33:22,862: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 23:33:22,862: INFO: common: created directory at: artifacts]
+[2025-10-22 23:33:22,863: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 23:33:22,864: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 23:33:22,865: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 23:33:22,867: INFO: common: created directory at: artifacts]
+[2025-10-22 23:33:22,868: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 23:33:24,248: INFO: data_ingestion: Downloaded artifacts\data_ingestion\SamsumData.zip from https://github.com/MR-AMINUR/New-Repo/raw/refs/heads/main/SamsumData.zip]
+[2025-10-22 23:33:24,249: INFO: data_ingestion: Size of downloaded file: ~ 0 KB]
+[2025-10-22 23:33:24,251: INFO: data_ingestion: Extracted zip file to artifacts\data_ingestion]
+[2025-10-22 23:33:24,826: ERROR: main: Error in stage Data Ingestion Stage: Dataset 'samsum' doesn't exist on the Hub or cannot be accessed.]
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\main.py", line 10, in <module>
+    dataset =data_ingestion_pipeline.main()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\pipeline\stage_01_data_ingestion.py", line 21, in main
+    self.data_ingestion.prepare_dataset()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_ingestion.py", line 33, in prepare_dataset
+    dataset = load_dataset("samsum")
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1397, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1137, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1030, in dataset_module_factory
+    raise e1 from None
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 985, in dataset_module_factory
+    raise DatasetNotFoundError(f"Dataset '{path}' doesn't exist on the Hub or cannot be accessed.") from e
+datasets.exceptions.DatasetNotFoundError: Dataset 'samsum' doesn't exist on the Hub or cannot be accessed.
+[2025-10-22 23:37:16,200: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 23:37:16,203: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 23:37:16,204: INFO: common: created directory at: artifacts]
+[2025-10-22 23:37:16,205: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 23:37:16,207: INFO: common: created directory at: artifacts\data_ingestion]
+[2025-10-22 23:37:16,209: INFO: 3745921866: File already exists at artifacts\data_ingestion\SamsumData.zip]
+[2025-10-22 23:37:16,210: INFO: common: created directory at: artifacts\data_ingestion]
+[2025-10-22 23:37:16,212: INFO: 3745921866: Extracted zip file to artifacts\data_ingestion]
+[2025-10-22 23:42:27,729: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-22 23:42:27,740: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 23:42:27,741: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 23:42:27,742: INFO: common: created directory at: artifacts]
+[2025-10-22 23:42:27,742: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 23:42:27,744: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 23:42:27,744: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 23:42:27,745: INFO: common: created directory at: artifacts]
+[2025-10-22 23:42:27,745: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 23:42:27,745: INFO: data_ingestion: File already exists at artifacts\data_ingestion\SamsumData.zip]
+[2025-10-22 23:42:27,746: INFO: data_ingestion: Extracted zip file to artifacts\data_ingestion]
+[2025-10-22 23:42:28,769: ERROR: main: Error in stage Data Ingestion Stage: Dataset 'samsum' doesn't exist on the Hub or cannot be accessed.]
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\main.py", line 10, in <module>
+    dataset =data_ingestion_pipeline.main()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\pipeline\stage_01_data_ingestion.py", line 21, in main
+    self.data_ingestion.prepare_dataset()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_ingestion.py", line 33, in prepare_dataset
+    dataset = load_dataset("samsum")
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1397, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1137, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1030, in dataset_module_factory
+    raise e1 from None
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 985, in dataset_module_factory
+    raise DatasetNotFoundError(f"Dataset '{path}' doesn't exist on the Hub or cannot be accessed.") from e
+datasets.exceptions.DatasetNotFoundError: Dataset 'samsum' doesn't exist on the Hub or cannot be accessed.
+[2025-10-22 23:47:49,798: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 23:47:49,801: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 23:47:49,802: INFO: common: created directory at: artifacts]
+[2025-10-22 23:47:49,804: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 23:47:49,806: INFO: common: created directory at: artifacts\data_ingestion]
+[2025-10-22 23:47:49,809: INFO: 3745921866: File already exists at artifacts\data_ingestion\SamsumData.zip]
+[2025-10-22 23:47:49,810: INFO: common: created directory at: artifacts\data_ingestion]
+[2025-10-22 23:47:49,812: INFO: 3745921866: Extracted zip file to artifacts\data_ingestion]
+[2025-10-22 23:57:44,400: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 23:57:44,404: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 23:57:44,407: INFO: common: created directory at: artifacts]
+[2025-10-22 23:57:44,410: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 23:57:44,412: INFO: common: created directory at: artifacts\data_ingestion]
+[2025-10-22 23:57:44,413: INFO: 3140536359: File already exists at artifacts\data_ingestion\SamsumData.zip]
+[2025-10-23 00:00:37,818: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-23 00:00:37,822: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-23 00:00:37,823: INFO: common: created directory at: artifacts]
+[2025-10-23 00:00:37,826: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-23 00:00:37,829: INFO: common: created directory at: artifacts\data_ingestion]
+[2025-10-23 00:00:38,734: INFO: 3140536359: Downloaded artifacts\data_ingestion\SamsumData.zip from https://github.com/MR-AMINUR/New-Repo/raw/refs/heads/main/SamsumData.zip]
+[2025-10-23 00:00:38,736: INFO: 3140536359: Size of downloaded file: ~ 0 KB]
+[2025-10-23 00:57:58,711: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-23 00:57:58,715: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-23 00:57:58,717: INFO: common: created directory at: artifacts]
+[2025-10-23 00:57:58,720: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-23 00:58:01,813: INFO: 3114257384: File: artifacts/data_ingestion/data.zip downloaded with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 24CB:37DDB:2C8539:54D4EC:68F93035
+Accept-Ranges: bytes
+Date: Wed, 22 Oct 2025 19:28:01 GMT
+Via: 1.1 varnish
+X-Served-By: cache-ccu830027-CCU
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1761161281.922550,VS0,VE732
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 6961395e51cbda439aab24c1a9550dc6fb9184d1
+Expires: Wed, 22 Oct 2025 19:33:01 GMT
+Source-Age: 0
+
+]
+[2025-10-23 00:58:01,918: INFO: 3114257384: File extracted to artifacts/data_ingestion]
+[2025-10-23 01:09:23,845: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-23 01:09:23,847: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-23 01:09:23,848: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-23 01:09:23,849: INFO: common: created directory at: artifacts]
+[2025-10-23 01:09:23,849: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-23 01:09:23,851: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-23 01:09:23,852: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-23 01:09:23,854: INFO: common: created directory at: artifacts]
+[2025-10-23 01:09:23,854: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-23 01:09:27,051: INFO: data_ingestion: Downloaded artifacts\data_ingestion\data.zip from https://github.com/entbappy/Branching-tutorial/raw/master/summarizer-data.zip]
+[2025-10-23 01:09:27,053: INFO: data_ingestion: Size of downloaded file: ~ 7718 KB]
+[2025-10-23 01:09:27,153: INFO: data_ingestion: Extracted zip file to artifacts\data_ingestion]
+[2025-10-23 01:09:27,775: ERROR: main: Error in stage Data Ingestion Stage: Dataset 'samsum' doesn't exist on the Hub or cannot be accessed.]
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\main.py", line 10, in <module>
+    dataset =data_ingestion_pipeline.main()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\pipeline\stage_01_data_ingestion.py", line 21, in main
+    self.data_ingestion.prepare_dataset()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_ingestion.py", line 33, in prepare_dataset
+    dataset = load_dataset("samsum")
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1397, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1137, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1030, in dataset_module_factory
+    raise e1 from None
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 985, in dataset_module_factory
+    raise DatasetNotFoundError(f"Dataset '{path}' doesn't exist on the Hub or cannot be accessed.") from e
+datasets.exceptions.DatasetNotFoundError: Dataset 'samsum' doesn't exist on the Hub or cannot be accessed.

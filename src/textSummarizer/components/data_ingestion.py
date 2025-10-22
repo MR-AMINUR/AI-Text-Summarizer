@@ -5,6 +5,7 @@ from textSummarizer.logging import logger
 from textSummarizer.utils.common import get_size
 from pathlib import Path
 from textSummarizer.entity import DataIngestionConfig
+from datasets import load_dataset
 
 
 class DataIngestion:
@@ -27,3 +28,8 @@ class DataIngestion:
         with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
             zip_ref.extractall(unzip_path)
         logger.info(f"Extracted zip file to {unzip_path}")
+
+    def prepare_dataset(self):
+        dataset = load_dataset("samsum")
+        dataset.save_to_disk(os.path.join(self.config.root_dir, "samsum_dataset"))
+        logger.info(f"Dataset saved to {os.path.join(self.config.root_dir, 'samsum_dataset')}")
