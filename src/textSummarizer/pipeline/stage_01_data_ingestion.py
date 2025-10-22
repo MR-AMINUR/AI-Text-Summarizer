@@ -18,5 +18,5 @@ class DataIngestionPipeline:
 
             data_ingestion.download_file()
             data_ingestion.extract_zip_file()
-            self.data_ingestion.prepare_dataset()
+            
         

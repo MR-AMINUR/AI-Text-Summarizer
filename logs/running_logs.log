@@ -743,3 +743,201 @@ Traceback (most recent call last):
   File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 985, in dataset_module_factory
     raise DatasetNotFoundError(f"Dataset '{path}' doesn't exist on the Hub or cannot be accessed.") from e
 datasets.exceptions.DatasetNotFoundError: Dataset 'samsum' doesn't exist on the Hub or cannot be accessed.
+[2025-10-23 01:14:37,618: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-23 01:14:37,621: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-23 01:14:37,623: INFO: common: created directory at: artifacts]
+[2025-10-23 01:14:37,625: INFO: common: created directory at: artifacts/data_validation]
+[2025-10-23 01:24:06,827: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-23 01:24:06,829: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-23 01:24:06,829: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-23 01:24:06,830: INFO: common: created directory at: artifacts]
+[2025-10-23 01:24:06,830: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-23 01:24:06,831: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-23 01:24:06,832: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-23 01:24:06,832: INFO: common: created directory at: artifacts]
+[2025-10-23 01:24:06,832: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-23 01:24:09,997: INFO: data_ingestion: Downloaded artifacts\data_ingestion\data.zip from https://github.com/entbappy/Branching-tutorial/raw/master/summarizer-data.zip]
+[2025-10-23 01:24:09,998: INFO: data_ingestion: Size of downloaded file: ~ 7718 KB]
+[2025-10-23 01:24:10,090: INFO: data_ingestion: Extracted zip file to artifacts\data_ingestion]
+[2025-10-23 01:24:10,644: ERROR: main: Error in stage Data Ingestion Stage: Dataset 'samsum' doesn't exist on the Hub or cannot be accessed.]
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\main.py", line 10, in <module>
+    dataset =data_ingestion_pipeline.main()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\pipeline\stage_01_data_ingestion.py", line 21, in main
+    self.data_ingestion.prepare_dataset()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_ingestion.py", line 33, in prepare_dataset
+    dataset = load_dataset("samsum")
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1397, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1137, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1030, in dataset_module_factory
+    raise e1 from None
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 985, in dataset_module_factory
+    raise DatasetNotFoundError(f"Dataset '{path}' doesn't exist on the Hub or cannot be accessed.") from e
+datasets.exceptions.DatasetNotFoundError: Dataset 'samsum' doesn't exist on the Hub or cannot be accessed.
+[2025-10-23 01:33:06,653: INFO: main: >>>>>> Stage Data validation Stage started <<<<<<]
+[2025-10-23 01:33:06,655: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-23 01:33:06,656: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-23 01:33:06,657: INFO: common: created directory at: artifacts]
+[2025-10-23 01:33:06,657: INFO: common: created directory at: artifacts/data_validation]
+[2025-10-23 01:33:06,657: ERROR: data_validation: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset']
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_validation.py", line 13, in validate_all_files_exist
+    all_files = os.listdir(os.path.join("artifacts","data_ingestion","samsum_dataset"))
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset'
+[2025-10-23 01:33:06,658: ERROR: main: Error in stage Data validation Stage: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset']
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\main.py", line 22, in <module>
+    data_validation_pipeline.main()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\pipeline\stage_02_data_validation.py", line 17, in main
+    data_validation.validate_all_files_exist()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_validation.py", line 29, in validate_all_files_exist
+    raise e
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_validation.py", line 13, in validate_all_files_exist
+    all_files = os.listdir(os.path.join("artifacts","data_ingestion","samsum_dataset"))
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset'
+[2025-10-23 01:38:35,337: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-23 01:38:35,340: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-23 01:38:35,342: INFO: common: created directory at: artifacts]
+[2025-10-23 01:38:35,345: INFO: common: created directory at: artifacts/data_validation]
+[2025-10-23 01:38:35,346: ERROR: 2962765456: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset']
+Traceback (most recent call last):
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_25416\2962765456.py", line 9, in validate_all_files_exist
+    all_files = os.listdir(os.path.join("artifacts","data_ingestion","samsum_dataset"))
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset'
+[2025-10-23 01:38:35,348: ERROR: 2432114696: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset']
+Traceback (most recent call last):
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_25416\2432114696.py", line 7, in <module>
+    status = data_validation.validate_all_files_exist()
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_25416\2962765456.py", line 25, in validate_all_files_exist
+    raise e
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_25416\2962765456.py", line 9, in validate_all_files_exist
+    all_files = os.listdir(os.path.join("artifacts","data_ingestion","samsum_dataset"))
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset'
+[2025-10-23 01:38:48,802: ERROR: 2432114696: [Errno 2] No such file or directory: 'config\\config.yaml']
+Traceback (most recent call last):
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_25416\2432114696.py", line 2, in <module>
+    config = ConfigurationManager()
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_25416\519435022.py", line 7, in __init__
+    self.config = read_yaml(config_filepath)
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\ensure\main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\utils\common.py", line 32, in read_yaml
+    raise e
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\utils\common.py", line 21, in read_yaml
+    with open(path_to_yaml, 'r') as yaml_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'config\\config.yaml'
+[2025-10-23 01:39:26,959: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-23 01:39:26,962: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-23 01:39:26,965: INFO: common: created directory at: artifacts]
+[2025-10-23 01:39:26,966: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-23 01:39:29,584: INFO: 3114257384: File: artifacts/data_ingestion/data.zip downloaded with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 24CB:37DDB:2C8539:54D4EC:68F93035
+Accept-Ranges: bytes
+Date: Wed, 22 Oct 2025 20:09:29 GMT
+Via: 1.1 varnish
+X-Served-By: cache-ccu830051-CCU
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1761163769.170044,VS0,VE250
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 069e7cd57f0d41fa2dcffe1adc9091a51c5f0c97
+Expires: Wed, 22 Oct 2025 20:14:29 GMT
+Source-Age: 0
+
+]
+[2025-10-23 01:39:29,684: INFO: 3114257384: File extracted to artifacts/data_ingestion]
+[2025-10-23 01:41:24,013: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-23 01:41:24,016: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-23 01:41:24,018: INFO: common: created directory at: artifacts]
+[2025-10-23 01:41:24,021: INFO: common: created directory at: artifacts/data_validation]
+[2025-10-23 01:51:18,959: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-23 01:51:18,960: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-23 01:51:18,962: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-23 01:51:18,962: INFO: common: created directory at: artifacts]
+[2025-10-23 01:51:18,963: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-23 01:51:18,963: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-23 01:51:18,964: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-23 01:51:18,966: INFO: common: created directory at: artifacts]
+[2025-10-23 01:51:18,966: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-23 01:51:21,901: INFO: data_ingestion: Downloaded artifacts\data_ingestion\data.zip from https://github.com/entbappy/Branching-tutorial/raw/master/summarizer-data.zip]
+[2025-10-23 01:51:21,901: INFO: data_ingestion: Size of downloaded file: ~ 7718 KB]
+[2025-10-23 01:51:21,991: INFO: data_ingestion: Extracted zip file to artifacts\data_ingestion]
+[2025-10-23 01:51:22,551: ERROR: main: Dataset 'samsum' doesn't exist on the Hub or cannot be accessed.]
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\main.py", line 9, in <module>
+    data_ingestion.main()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\pipeline\stage_01_data_ingestion.py", line 21, in main
+    self.data_ingestion.prepare_dataset()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_ingestion.py", line 33, in prepare_dataset
+    dataset = load_dataset("samsum")
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1397, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1137, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 1030, in dataset_module_factory
+    raise e1 from None
+  File "C:\Users\aminu\Miniconda3\envs\textS\lib\site-packages\datasets\load.py", line 985, in dataset_module_factory
+    raise DatasetNotFoundError(f"Dataset '{path}' doesn't exist on the Hub or cannot be accessed.") from e
+datasets.exceptions.DatasetNotFoundError: Dataset 'samsum' doesn't exist on the Hub or cannot be accessed.
+[2025-10-23 01:59:06,009: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-23 01:59:06,010: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-23 01:59:06,010: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-23 01:59:06,011: INFO: common: created directory at: artifacts]
+[2025-10-23 01:59:06,011: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-23 01:59:06,012: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-23 01:59:06,013: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-23 01:59:06,014: INFO: common: created directory at: artifacts]
+[2025-10-23 01:59:06,014: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-23 01:59:09,018: INFO: data_ingestion: File: artifacts\data_ingestion\data.zip downloaded with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 24CB:37DDB:2C8539:54D4EC:68F93035
+Accept-Ranges: bytes
+Date: Wed, 22 Oct 2025 20:29:08 GMT
+Via: 1.1 varnish
+X-Served-By: cache-ccu830021-CCU
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1761164949.538746,VS0,VE249
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: ca8eb2d7a1c85c75bf4e17f411c076cf845a9d72
+Expires: Wed, 22 Oct 2025 20:34:08 GMT
+Source-Age: 0
+
+]
+[2025-10-23 01:59:09,115: INFO: data_ingestion: File extracted to artifacts\data_ingestion]
+[2025-10-23 01:59:09,116: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+X==========x]
+[2025-10-23 01:59:09,116: INFO: main: >>>>>> Stage Data Validation Stage started <<<<<<]
+[2025-10-23 01:59:09,117: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-23 01:59:09,118: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-23 01:59:09,119: INFO: common: created directory at: artifacts]
+[2025-10-23 01:59:09,119: INFO: common: created directory at: artifacts/data_validation]
+[2025-10-23 01:59:09,120: INFO: main: >>>>>> Stage Data Validation Stage completed <<<<<<
+
+X==========x]

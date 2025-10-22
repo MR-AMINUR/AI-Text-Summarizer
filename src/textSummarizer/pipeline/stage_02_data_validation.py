@@ -14,5 +14,5 @@ class DataValidationPipeline:
 
             data_validation = DataValidation(config=data_validation_config)
 
-            status = data_validation.validate_all_files_exist()
+            data_validation.validate_all_files_exist()
         

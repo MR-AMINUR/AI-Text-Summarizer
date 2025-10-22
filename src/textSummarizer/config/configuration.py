@@ -32,7 +32,7 @@ class ConfigurationManager:
 
         create_directories([config.root_dir])
         data_validation_config = DataValidationConfig(
-            root_dir=Path(config.root_dir),
+            root_dir=config.root_dir,
             STATUS_FILE=config.STATUS_FILE,
             ALL_REQUIRED_FILES=config.ALL_REQUIRED_FILES
         )

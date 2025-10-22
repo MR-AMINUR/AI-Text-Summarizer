@@ -5,31 +5,30 @@ from textSummarizer.logging import logger
 from textSummarizer.utils.common import get_size
 from pathlib import Path
 from textSummarizer.entity import DataIngestionConfig
-from datasets import load_dataset
+
 
 
 class DataIngestion:
     def __init__(self, config: DataIngestionConfig):
         self.config = config
-
+    
     def download_file(self):
         if not os.path.exists(self.config.local_data_file):
             filename, headers = request.urlretrieve(
                 url=self.config.source_URL,
-                filename=self.config.local_data_file)
-        
-            logger.info(f"Downloaded {filename} from {self.config.source_URL}")
-            logger.info(f"Size of downloaded file: {get_size(self.config.local_data_file)}")
+                filename=self.config.local_data_file
+            )
+            logger.info(
+                f"File: {filename} downloaded with following info: \n{headers}"
+            )
         else:
-            logger.info(f"File already exists at {self.config.local_data_file}")
+            logger.info(
+                f"File already exists of size: {get_size(Path(self.config.local_data_file))}"
+            )
+    
     def extract_zip_file(self):
         unzip_path = self.config.unzip_dir
         os.makedirs(unzip_path, exist_ok=True)
         with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
             zip_ref.extractall(unzip_path)
-        logger.info(f"Extracted zip file to {unzip_path}")
-
-    def prepare_dataset(self):
-        dataset = load_dataset("samsum")
-        dataset.save_to_disk(os.path.join(self.config.root_dir, "samsum_dataset"))
-        logger.info(f"Dataset saved to {os.path.join(self.config.root_dir, 'samsum_dataset')}")
+        logger.info(f"File extracted to {unzip_path}")
