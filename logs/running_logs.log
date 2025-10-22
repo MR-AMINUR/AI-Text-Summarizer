@@ -118,3 +118,206 @@ x==========x]
 [2025-10-22 16:49:05,656: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
 
 x==========x]
+[2025-10-22 18:52:34,751: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 18:52:34,754: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 18:52:34,756: INFO: common: created directory at: artifacts]
+[2025-10-22 18:52:34,758: INFO: common: created directory at: artifacts/data_validation]
+[2025-10-22 19:11:02,391: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-22 19:11:02,393: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 19:11:02,394: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 19:11:02,395: INFO: common: created directory at: artifacts]
+[2025-10-22 19:11:02,395: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 19:11:03,782: INFO: data_ingestion: Downloaded artifacts\data_ingestion\SamsumData.zip from https://github.com/MR-AMINUR/New-Repo/raw/refs/heads/main/SamsumData.zip]
+[2025-10-22 19:11:03,782: INFO: data_ingestion: Size of downloaded file: ~ 0 KB]
+[2025-10-22 19:11:03,783: INFO: data_ingestion: Extracted zip file to artifacts\data_ingestion]
+[2025-10-22 19:11:03,783: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-10-22 19:11:03,783: INFO: main: >>>>>> Stage Data validation Stage started <<<<<<]
+[2025-10-22 19:11:03,785: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 19:11:03,786: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 19:11:03,786: INFO: common: created directory at: artifacts]
+[2025-10-22 19:11:03,787: INFO: common: created directory at: artifacts/data_validation]
+[2025-10-22 19:11:03,787: ERROR: main: Error in stage Data validation Stage: 'DataValidation' object has no attribute 'download_file']
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\main.py", line 21, in <module>
+    data_validation_pipeline.main()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\pipeline\stage_02_data_validation.py", line 15, in main
+    data_validation.download_file()
+AttributeError: 'DataValidation' object has no attribute 'download_file'
+[2025-10-22 19:12:32,987: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-22 19:12:32,989: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 19:12:32,990: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 19:12:32,990: INFO: common: created directory at: artifacts]
+[2025-10-22 19:12:32,990: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 19:12:32,991: INFO: data_ingestion: File already exists at artifacts\data_ingestion\SamsumData.zip]
+[2025-10-22 19:12:32,991: INFO: data_ingestion: Extracted zip file to artifacts\data_ingestion]
+[2025-10-22 19:12:32,991: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-10-22 19:12:32,992: INFO: main: >>>>>> Stage Data validation Stage started <<<<<<]
+[2025-10-22 19:12:32,993: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 19:12:32,993: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 19:12:32,994: INFO: common: created directory at: artifacts]
+[2025-10-22 19:12:32,994: INFO: common: created directory at: artifacts/data_validation]
+[2025-10-22 19:12:32,994: ERROR: data_validation: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset']
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_validation.py", line 13, in validate_all_files_exist
+    all_files = os.listdir(os.path.join("artifacts","data_ingestion","samsum_dataset"))
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset'
+[2025-10-22 19:12:32,995: ERROR: main: Error in stage Data validation Stage: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset']
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\main.py", line 21, in <module>
+    data_validation_pipeline.main()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\pipeline\stage_02_data_validation.py", line 17, in main
+    status = data_validation.validate_all_files_exist()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_validation.py", line 29, in validate_all_files_exist
+    raise e
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_validation.py", line 13, in validate_all_files_exist
+    all_files = os.listdir(os.path.join("artifacts","data_ingestion","samsum_dataset"))
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset'
+[2025-10-22 19:13:04,360: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-22 19:13:04,361: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 19:13:04,362: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 19:13:04,363: INFO: common: created directory at: artifacts]
+[2025-10-22 19:13:04,363: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 19:13:05,042: INFO: data_ingestion: Downloaded artifacts\data_ingestion\SamsumData.zip from https://github.com/MR-AMINUR/New-Repo/raw/refs/heads/main/SamsumData.zip]
+[2025-10-22 19:13:05,043: INFO: data_ingestion: Size of downloaded file: ~ 0 KB]
+[2025-10-22 19:13:05,043: INFO: data_ingestion: Extracted zip file to artifacts\data_ingestion]
+[2025-10-22 19:13:05,043: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-10-22 19:13:05,044: INFO: main: >>>>>> Stage Data validation Stage started <<<<<<]
+[2025-10-22 19:13:05,045: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 19:13:05,046: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 19:13:05,046: INFO: common: created directory at: artifacts]
+[2025-10-22 19:13:05,047: INFO: common: created directory at: artifacts/data_validation]
+[2025-10-22 19:13:05,047: ERROR: data_validation: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset']
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_validation.py", line 13, in validate_all_files_exist
+    all_files = os.listdir(os.path.join("artifacts","data_ingestion","samsum_dataset"))
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset'
+[2025-10-22 19:13:05,047: ERROR: main: Error in stage Data validation Stage: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset']
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\main.py", line 21, in <module>
+    data_validation_pipeline.main()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\pipeline\stage_02_data_validation.py", line 17, in main
+    status = data_validation.validate_all_files_exist()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_validation.py", line 29, in validate_all_files_exist
+    raise e
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_validation.py", line 13, in validate_all_files_exist
+    all_files = os.listdir(os.path.join("artifacts","data_ingestion","samsum_dataset"))
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset'
+[2025-10-22 19:15:04,938: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-22 19:15:04,939: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 19:15:04,940: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 19:15:04,941: INFO: common: created directory at: artifacts]
+[2025-10-22 19:15:04,941: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 19:15:05,605: INFO: data_ingestion: Downloaded artifacts\data_ingestion\SamsumData.zip from https://github.com/MR-AMINUR/New-Repo/raw/refs/heads/main/SamsumData.zip]
+[2025-10-22 19:15:05,605: INFO: data_ingestion: Size of downloaded file: ~ 0 KB]
+[2025-10-22 19:15:05,606: INFO: data_ingestion: Extracted zip file to artifacts\data_ingestion]
+[2025-10-22 19:15:05,606: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-10-22 19:15:05,606: INFO: main: >>>>>> Stage Data validation Stage started <<<<<<]
+[2025-10-22 19:15:05,607: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 19:15:05,608: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 19:15:05,608: INFO: common: created directory at: artifacts]
+[2025-10-22 19:15:05,608: INFO: common: created directory at: artifacts/data_validation]
+[2025-10-22 19:15:05,609: ERROR: data_validation: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset']
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_validation.py", line 13, in validate_all_files_exist
+    all_files = os.listdir(os.path.join("artifacts","data_ingestion","samsum_dataset"))
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset'
+[2025-10-22 19:15:05,609: ERROR: main: Error in stage Data validation Stage: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset']
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\main.py", line 21, in <module>
+    data_validation_pipeline.main()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\pipeline\stage_02_data_validation.py", line 17, in main
+    status = data_validation.validate_all_files_exist()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_validation.py", line 29, in validate_all_files_exist
+    raise e
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_validation.py", line 13, in validate_all_files_exist
+    all_files = os.listdir(os.path.join("artifacts","data_ingestion","samsum_dataset"))
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset'
+[2025-10-22 19:21:20,685: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-22 19:21:20,686: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 19:21:20,686: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 19:21:20,687: INFO: common: created directory at: artifacts]
+[2025-10-22 19:21:20,687: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 19:21:21,963: INFO: data_ingestion: Downloaded artifacts\data_ingestion\SamsumData.zip from https://github.com/MR-AMINUR/New-Repo/raw/refs/heads/main/SamsumData.zip]
+[2025-10-22 19:21:21,963: INFO: data_ingestion: Size of downloaded file: ~ 0 KB]
+[2025-10-22 19:21:21,964: INFO: data_ingestion: Extracted zip file to artifacts\data_ingestion]
+[2025-10-22 19:21:21,964: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-10-22 19:21:21,964: INFO: main: >>>>>> Stage Data validation Stage started <<<<<<]
+[2025-10-22 19:21:21,966: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 19:21:21,966: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 19:21:21,966: INFO: common: created directory at: artifacts]
+[2025-10-22 19:21:21,967: INFO: common: created directory at: artifacts/data_validation]
+[2025-10-22 19:21:21,967: ERROR: data_validation: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset']
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_validation.py", line 13, in validate_all_files_exist
+    all_files = os.listdir(os.path.join("artifacts","data_ingestion","samsum_dataset"))
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset'
+[2025-10-22 19:21:21,967: ERROR: main: Error in stage Data validation Stage: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset']
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\main.py", line 21, in <module>
+    data_validation_pipeline.main()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\pipeline\stage_02_data_validation.py", line 17, in main
+    status = data_validation.validate_all_files_exist()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_validation.py", line 29, in validate_all_files_exist
+    raise e
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_validation.py", line 13, in validate_all_files_exist
+    all_files = os.listdir(os.path.join("artifacts","data_ingestion","samsum_dataset"))
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\samsum_dataset'
+[2025-10-22 19:22:10,336: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-22 19:22:10,338: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 19:22:10,339: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 19:22:10,339: INFO: common: created directory at: artifacts]
+[2025-10-22 19:22:10,339: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 19:22:10,340: INFO: data_ingestion: File already exists at artifacts\data_ingestion\SamsumData.zip]
+[2025-10-22 19:22:10,340: INFO: data_ingestion: Extracted zip file to artifacts\data_ingestion]
+[2025-10-22 19:22:10,341: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-10-22 19:22:10,341: INFO: main: >>>>>> Stage Data validation Stage started <<<<<<]
+[2025-10-22 19:22:10,342: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 19:22:10,343: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 19:22:10,346: INFO: common: created directory at: artifacts]
+[2025-10-22 19:22:10,346: INFO: common: created directory at: artifacts/data_validation]
+[2025-10-22 19:22:10,347: ERROR: data_validation: [WinError 267] The directory name is invalid: 'artifacts\\data_ingestion\\samsum_dataset']
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_validation.py", line 13, in validate_all_files_exist
+    all_files = os.listdir(os.path.join("artifacts","data_ingestion","samsum_dataset"))
+NotADirectoryError: [WinError 267] The directory name is invalid: 'artifacts\\data_ingestion\\samsum_dataset'
+[2025-10-22 19:22:10,347: ERROR: main: Error in stage Data validation Stage: [WinError 267] The directory name is invalid: 'artifacts\\data_ingestion\\samsum_dataset']
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\main.py", line 21, in <module>
+    data_validation_pipeline.main()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\pipeline\stage_02_data_validation.py", line 17, in main
+    status = data_validation.validate_all_files_exist()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_validation.py", line 29, in validate_all_files_exist
+    raise e
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\components\data_validation.py", line 13, in validate_all_files_exist
+    all_files = os.listdir(os.path.join("artifacts","data_ingestion","samsum_dataset"))
+NotADirectoryError: [WinError 267] The directory name is invalid: 'artifacts\\data_ingestion\\samsum_dataset'
+[2025-10-22 19:23:03,233: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-22 19:23:03,235: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 19:23:03,235: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 19:23:03,236: INFO: common: created directory at: artifacts]
+[2025-10-22 19:23:03,236: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-10-22 19:23:03,236: INFO: data_ingestion: File already exists at artifacts\data_ingestion\SamsumData.zip]
+[2025-10-22 19:23:03,237: INFO: data_ingestion: Extracted zip file to artifacts\data_ingestion]
+[2025-10-22 19:23:03,237: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-10-22 19:23:03,237: INFO: main: >>>>>> Stage Data validation Stage started <<<<<<]
+[2025-10-22 19:23:03,238: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 19:23:03,239: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 19:23:03,239: INFO: common: created directory at: artifacts]
+[2025-10-22 19:23:03,239: INFO: common: created directory at: artifacts/data_validation]
+[2025-10-22 19:23:03,239: INFO: main: >>>>>> Stage Data validation Stage completed <<<<<<
+
+x==========x]
