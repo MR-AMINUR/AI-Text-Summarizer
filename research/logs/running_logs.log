@@ -1,0 +1,68 @@
+[2025-10-22 01:20:22,322: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 01:20:24,120: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 02:02:07,280: ERROR: 418161865: [Errno 2] No such file or directory: 'config\\config.yaml']
+Traceback (most recent call last):
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_7832\418161865.py", line 2, in <module>
+    config_manager = ConfigurationManager()
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_7832\2062214159.py", line 7, in __init__
+    self.config = read_yaml(config_filepath)
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\ensure\main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\utils\common.py", line 35, in read_yaml
+    raise e
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\utils\common.py", line 28, in read_yaml
+    with open(path_to_yaml) as yaml_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'config\\config.yaml'
+[2025-10-22 02:04:59,119: ERROR: 947058205: [Errno 2] No such file or directory: 'config\\config.yaml']
+Traceback (most recent call last):
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_7832\947058205.py", line 2, in <module>
+    config_manager = ConfigurationManager()
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_7832\2062214159.py", line 7, in __init__
+    self.config = read_yaml(config_filepath)
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\ensure\main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\utils\common.py", line 35, in read_yaml
+    raise e
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\utils\common.py", line 28, in read_yaml
+    with open(path_to_yaml) as yaml_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'config\\config.yaml'
+[2025-10-22 02:07:59,277: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 02:07:59,278: ERROR: 242053552: yaml file is empty]
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\utils\common.py", line 31, in read_yaml
+    return ConfigBox(content)
+  File "box\box.py", line 259, in box.box.Box.__init__
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_7832\242053552.py", line 2, in <module>
+    config_manager = ConfigurationManager()
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_7832\2062214159.py", line 7, in __init__
+    self.config = read_yaml(config_filepath)
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\ensure\main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\utils\common.py", line 33, in read_yaml
+    raise ValueError("yaml file is empty")
+ValueError: yaml file is empty
+[2025-10-22 02:11:12,949: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 02:11:12,951: ERROR: 418161865: yaml file is empty]
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\utils\common.py", line 31, in read_yaml
+    return ConfigBox(content)
+  File "box\box.py", line 259, in box.box.Box.__init__
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_7832\418161865.py", line 2, in <module>
+    config_manager = ConfigurationManager()
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_7832\2062214159.py", line 7, in __init__
+    self.config = read_yaml(config_filepath)
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\site-packages\ensure\main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\utils\common.py", line 33, in read_yaml
+    raise ValueError("yaml file is empty")
+ValueError: yaml file is empty

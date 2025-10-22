@@ -1,1 +1,96 @@
 [2025-10-20 23:53:52,023: INFO: main: Welcome to our custom logging]
+[2025-10-22 08:24:20,411: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 08:24:20,444: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 08:24:20,446: INFO: common: created directory at: artifacts]
+[2025-10-22 08:24:20,447: INFO: 1950418334: Starting data download...]
+[2025-10-22 08:24:20,449: INFO: 1950418334: Downloading data from https://github.com/MR-AMINUR/New-Repo/raw/refs/heads/main/SamsumData.zip to artifacts\data_ingestion\SamsumData.zip...]
+[2025-10-22 08:24:22,430: ERROR: 3179086842: An error occurred: [Errno 2] No such file or directory: 'artifacts\\data_ingestion\\SamsumData.zip']
+Traceback (most recent call last):
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_13196\3179086842.py", line 6, in <module>
+    zip_filepath = data_ingestion.download_data()
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_13196\1950418334.py", line 11, in download_data
+    request.urlretrieve(self.config.source_URL, zip_filepath)
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\urllib\request.py", line 251, in urlretrieve
+    tfp = open(filename, 'wb')
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\data_ingestion\\SamsumData.zip'
+[2025-10-22 08:28:11,872: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 08:28:11,876: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 08:28:11,877: INFO: common: created directory at: artifacts]
+[2025-10-22 08:28:11,877: INFO: 1950418334: Starting data download...]
+[2025-10-22 08:28:11,879: INFO: 1950418334: Downloading data from https://github.com/MR-AMINUR/New-Repo/raw/refs/heads/main/SamsumData.zip to artifacts\data_ingestion\SamsumData.zip...]
+[2025-10-22 08:28:45,635: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 08:28:45,637: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 08:28:45,638: INFO: common: created directory at: artifacts]
+[2025-10-22 08:28:45,638: INFO: 1950418334: Starting data download...]
+[2025-10-22 08:28:45,640: INFO: 1950418334: Downloading data from https://github.com/MR-AMINUR/New-Repo/raw/refs/heads/main/SamsumData.zip to artifacts\data_ingestion\SamsumData.zip...]
+[2025-10-22 08:28:45,893: ERROR: 3665016634: An error occurred: [Errno 2] No such file or directory: 'artifacts\\data_ingestion\\SamsumData.zip']
+Traceback (most recent call last):
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_13196\3665016634.py", line 6, in <module>
+    zip_file_path = data_ingestion.download_data()
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_13196\1950418334.py", line 11, in download_data
+    request.urlretrieve(self.config.source_URL, zip_filepath)
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\urllib\request.py", line 251, in urlretrieve
+    tfp = open(filename, 'wb')
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\data_ingestion\\SamsumData.zip'
+[2025-10-22 08:30:39,553: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 08:30:39,554: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 08:30:39,556: INFO: common: created directory at: artifacts]
+[2025-10-22 08:30:39,558: INFO: 1950418334: Starting data download...]
+[2025-10-22 08:30:39,558: INFO: 1950418334: Downloading data from https://github.com/MR-AMINUR/New-Repo/raw/refs/heads/main/SamsumData.zip to artifacts\data_ingestion\SamsumData.zip...]
+[2025-10-22 08:30:42,423: ERROR: 3665016634: An error occurred: [Errno 2] No such file or directory: 'artifacts\\data_ingestion\\SamsumData.zip']
+Traceback (most recent call last):
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_13196\3665016634.py", line 6, in <module>
+    zip_file_path = data_ingestion.download_data()
+  File "C:\Users\aminu\AppData\Local\Temp\ipykernel_13196\1950418334.py", line 11, in download_data
+    request.urlretrieve(self.config.source_URL, zip_filepath)
+  File "c:\Users\aminu\miniconda3\envs\textS\lib\urllib\request.py", line 251, in urlretrieve
+    tfp = open(filename, 'wb')
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\data_ingestion\\SamsumData.zip'
+[2025-10-22 08:34:46,980: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 08:34:46,982: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 08:34:46,984: INFO: common: created directory at: artifacts]
+[2025-10-22 08:34:46,985: INFO: 1134313400: Starting data download...]
+[2025-10-22 08:34:46,986: INFO: 1134313400: Downloading data from https://github.com/MR-AMINUR/New-Repo/raw/refs/heads/main/SamsumData.zip to artifacts\data_ingestion\SamsumData.zip...]
+[2025-10-22 08:34:48,173: INFO: 1134313400: Data download complete.]
+[2025-10-22 08:34:48,175: INFO: 1134313400: Extracting data from artifacts\data_ingestion\SamsumData.zip to artifacts\data_ingestion...]
+[2025-10-22 08:34:48,176: INFO: 1134313400: Extraction completed.]
+[2025-10-22 08:53:37,870: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-22 08:53:37,873: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 08:53:37,875: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 08:53:37,876: INFO: common: created directory at: artifacts]
+[2025-10-22 08:53:37,876: INFO: data_ingestion: Starting data download...]
+[2025-10-22 08:53:37,877: INFO: data_ingestion: Downloading data from https://github.com/MR-AMINUR/New-Repo/raw/refs/heads/main/SamsumData.zip to artifacts\data_ingestion\SamsumData.zip...]
+[2025-10-22 08:53:39,413: INFO: data_ingestion: Data download complete.]
+[2025-10-22 08:53:39,413: ERROR: main: Error in stage Data Ingestion Stage: DataIngestion.extract_zip() missing 1 required positional argument: 'zip_file_path']
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\main.py", line 8, in <module>
+    data_ingestion_pipeline.main()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.extract_zip()
+TypeError: DataIngestion.extract_zip() missing 1 required positional argument: 'zip_file_path'
+[2025-10-22 08:55:40,511: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-22 08:55:40,512: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 08:55:40,513: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 08:55:40,513: INFO: common: created directory at: artifacts]
+[2025-10-22 08:55:40,514: INFO: data_ingestion: Starting data download...]
+[2025-10-22 08:55:40,514: INFO: data_ingestion: Downloading data from https://github.com/MR-AMINUR/New-Repo/raw/refs/heads/main/SamsumData.zip to artifacts\data_ingestion\SamsumData.zip...]
+[2025-10-22 08:55:41,215: INFO: data_ingestion: Data download complete.]
+[2025-10-22 08:55:41,215: ERROR: main: Error in stage Data Ingestion Stage: DataIngestion.extract_zip() missing 1 required positional argument: 'zip_file_path']
+Traceback (most recent call last):
+  File "D:\Version Control\AI-Text-Summarizer\main.py", line 8, in <module>
+    data_ingestion_pipeline.main()
+  File "D:\Version Control\AI-Text-Summarizer\src\textSummarizer\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.extract_zip()
+TypeError: DataIngestion.extract_zip() missing 1 required positional argument: 'zip_file_path'
+[2025-10-22 08:57:51,335: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2025-10-22 08:57:51,336: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-10-22 08:57:51,337: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-10-22 08:57:51,338: INFO: common: created directory at: artifacts]
+[2025-10-22 08:57:51,338: INFO: data_ingestion: Starting data download...]
+[2025-10-22 08:57:51,338: INFO: data_ingestion: Downloading data from https://github.com/MR-AMINUR/New-Repo/raw/refs/heads/main/SamsumData.zip to artifacts\data_ingestion\SamsumData.zip...]
+[2025-10-22 08:57:52,372: INFO: data_ingestion: Data download complete.]
+[2025-10-22 08:57:52,372: INFO: data_ingestion: Extracting data from artifacts\data_ingestion\SamsumData.zip to artifacts\data_ingestion...]
+[2025-10-22 08:57:52,372: INFO: data_ingestion: Extraction completed.]
+[2025-10-22 08:57:52,377: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
