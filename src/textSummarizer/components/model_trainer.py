@@ -12,10 +12,7 @@ class ModelTrainer:
         self.config = config
 
     def train(self):
-        import torch
-        from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, DataCollatorForSeq2Seq, Trainer, TrainingArguments
-        from datasets import load_from_disk
-
+        
         device = "cuda" if torch.cuda.is_available() else "cpu"
 
         # Load tokenizer and model
@@ -45,6 +42,7 @@ class ModelTrainer:
             num_train_epochs=1,
             per_device_train_batch_size=1,
             per_device_eval_batch_size=1,
+            fp16=torch.cuda.is_available(),  # Enable mixed-precision training
             warmup_steps=500,
             weight_decay=0.01,
             logging_steps=10,
