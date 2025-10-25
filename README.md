@@ -1,15 +1,19 @@
-# AI Text Summerizer
-## Python + Gen AI project
+# 🧠 AI Text Summarizer
 
-## workflows
+An intelligent **AI-powered Text Summarization App** built with **FastAPI** (backend) and **Streamlit** (frontend).  
+This project takes long text passages and produces concise summaries using advanced Natural Language Processing (NLP) techniques.
 
-1. Update config.yaml
-2. Update param.yaml
-3. Update entity
-4. Update the configuration manager in src config
-5. Update the components
-6. Update the pipeline
-7. Update main.py
-8. Update app.py
+---
 
+## 🚀 Features
+
+- 🧩 **FastAPI backend** for efficient text summarization  
+- 🎨 **Streamlit frontend** for a clean and interactive UI  
+- ⚡ Real-time text summarization  
+- 🧱 Modular project structure (easy to extend and maintain)  
+- 🐳 Docker support for containerized deployment  
+
+---
+
+## 🏗️ Project Architecture
 
