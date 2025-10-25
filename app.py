@@ -39,6 +39,7 @@
 #     uvicorn.run(app, host="0.0.0.0", port=8000)
 
 from fastapi import FastAPI
+from fastapi import Form
 import uvicorn
 import sys
 import os
@@ -67,11 +68,11 @@ async def training():
         return Response(f"Training failed: {str(e)}")
     
 @app.post("/predict")
-async def predict_route(request: PredictionRequest):
+async def predict_route(text: str = Form(...)):
     try:
         obj = PredictionPipeline()
-        summary = obj.predict(request.text)
-        return {"summary": summary, "status": "success"}
+        summary = obj.predict(text)
+        return {"summary": summary}   #, "status": "success"
     except Exception as e:
         return {"error": str(e), "status": "error"}
 
